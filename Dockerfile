@@ -3,6 +3,7 @@ RUN apt-get update ; \
         apt-get install -y wget ;\
         apt-get clean all ;\
         rm -rf /var/lib/apt/lists/*
+RUN mkdir /www;        
 
 RUN wget --no-check-certificate -c https://github.com/phpmyadmin/phpmyadmin/archive/RELEASE_4_6_1.tar.gz; \
         tar zxvf RELEASE_4_6_1.tar.gz;\
